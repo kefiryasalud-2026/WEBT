@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuri Mijaíl Silva Ramos - Portafolio Profesional</title>
+    <!-- Tailwind CSS CDN para un estilizado moderno y rápido -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome para iconos de alta calidad -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        color1: '#BA13B7', // Magenta / Detalles creativos
+                        color2: '#BA6913', // Dorado-Marrón / Énfasis
+                        color3: '#13BA16', // Verde / Logros y Éxitos
+                        color4: '#1364BA', // Azul / Corporativo Principal
+                        darkBg: '#0f172a', // Azul Slate oscuro para modo formal oscuro
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilos personalizados para efectos de transición y scroll suave */
+        html {
+            scroll-behavior: smooth;
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, var(--color-4) 0%, var(--color-1) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-pattern {
+            background-color: #0f172a;
+            background-image: radial-gradient(circle at 20% 30%, rgba(19, 100, 186, 0.15) 0%, transparent 50%), 
+                              radial-gradient(circle at 80% 70%, rgba(186, 19, 183, 0.1) 0%, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans">
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold tracking-tight text-slate-900">
+                        YURI <span class="text-color4">SILVA</span>
+                    </span>
+                    <span class="ml-2 px-2.5 py-0.5 text-xs font-semibold rounded-full bg-slate-100 text-color2 border border-color2/20">
+                        Ing. de Sistemas
+                    </span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="text-sm font-medium text-slate-600 hover:text-color4 transition">Inicio</a>
+                    <a href="#perfil" class="text-sm font-medium text-slate-600 hover:text-color4 transition">Perfil</a>
+                    <a href="#experiencia" class="text-sm font-medium text-slate-600 hover:text-color4 transition">Experiencia</a>
+                    <a href="#proyectos" class="text-sm font-medium text-slate-600 hover:text-color4 transition">Proyectos y Tecnologías</a>
+                    <a href="#educacion" class="text-sm font-medium text-slate-600 hover:text-color4 transition">Educación</a>
+                    <a href="#contacto" class="text-sm font-medium text-slate-600 hover:text-color4 transition">Contacto</a>
+                </div>
+                <!-- Botón de Acción Directo -->
+                <div class="flex items-center">
+                    <a href="mailto:Yuri.silva@ddar.pe" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-color4 hover:bg-opacity-90 shadow-md transition">
+                        <i class="fa-regular fa-envelope mr-2"></i> Contratar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECCIÓN HERO / BIENVENIDA -->
+    <section id="inicio" class="hero-pattern text-white py-20 lg:py-32 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Presentación de texto -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-color4/20 border border-color4/30 text-white text-sm">
+                        <span class="w-2 h-2 rounded-full bg-color3 animate-pulse"></span> Disponible para nuevos proyectos
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Yuri Mijaíl Hans <br class="hidden sm:inline">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-color4 via-color1 to-color2">
+                            Silva Ramos
+                        </span>
+                    </h1>
+                    <p class="text-lg sm:text-xl text-slate-300 font-light max-w-xl mx-auto lg:mx-0">
+                        Ingeniero de Sistemas con más de 12 años de sólida trayectoria liderando arquitecturas de TI, automatización inteligente de procesos corporativos y administración de plataformas virtuales a gran escala.
+                    </p>
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#experiencia" class="px-6 py-3 rounded-lg bg-color4 hover:bg-color4/90 font-medium shadow-lg transition transform hover:-translate-y-0.5 text-center w-full sm:w-auto">
+                            Ver Experiencia y Logros
+                        </a>
+                        <a href="#contacto" class="px-6 py-3 rounded-lg border border-slate-600 hover:border-white text-slate-300 hover:text-white font-medium transition text-center w-full sm:w-auto">
+                            Información de Contacto
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contenedor de Imagen de perfil con Fallback Dinámico Elegante -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative group">
+                        <!-- Fondos decorativos geométricos que representan tu paleta -->
+                        <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-color1 via-color2 to-color4 opacity-75 blur-md group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                        <div id="photo-frame" class="relative bg-slate-950 p-3 rounded-2xl w-72 sm:w-80 md:w-96 aspect-[16/10] overflow-hidden flex items-center justify-center">
+                            <!-- Si la imagen falla en cargar localmente dentro del Sandbox de Canvas, se ejecuta la función de reemplazo por un avatar corporativo premium con tus iniciales 'YS' -->
+                            <img id="profile-picture" src="perfil-yuri.png" alt="Yuri Mijaíl Silva Ramos" 
+                                 class="w-full h-full rounded-xl object-cover shadow-2xl transition transform group-hover:scale-[1.02] duration-300" 
+                                 onerror="handleImageError()">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Script de control para la carga de imágenes -->
+    <script>
+        function handleImageError() {
+            const frame = document.getElementById('photo-frame');
+            // Reemplaza el contenido por un avatar de diseño vectorial sumamente elegante basado en tus iniciales
+            frame.innerHTML = `
+                <div class="w-full h-full min-h-[250px] bg-gradient-to-br from-color4 via-slate-900 to-color1 rounded-xl flex flex-col items-center justify-center text-center p-6 text-white shadow-2xl">
+                    <div class="w-20 h-20 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 mb-4 shadow-inner">
+                        <span class="text-3xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-200">YS</span>
+                    </div>
+                    <h3 class="font-bold text-lg tracking-wide">Yuri Mijaíl Silva Ramos</h3>
+                    <p class="text-xs text-color2 font-semibold uppercase tracking-widest mt-1">Ingeniero de Sistemas</p>
+                    <p class="text-[11px] text-slate-400 mt-3 max-w-xs leading-relaxed">Imagen cargada desde 'perfil-yuri.png'. Al descargar tu web, guarda tu foto con ese nombre exacto en la misma carpeta.</p>
+                </div>
+            `;
+        }
+    </script>
+
+    <!-- SECCIÓN DE CIFRAS MÁS DESTACADAS (LOGROS GLOBALES) -->
+    <section class="bg-white py-12 border-b border-slate-200 shadow-sm relative z-20 -mt-8 mx-4 max-w-6xl lg:mx-auto rounded-xl">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-slate-100">
+            <div class="p-4">
+                <p class="text-4xl md:text-5xl font-black text-color4">12+</p>
+                <p class="text-sm font-semibold text-slate-500 uppercase tracking-wider mt-1">Años de Trayectoria</p>
+            </div>
+            <div class="p-4 pt-8 md:pt-4">
+                <p class="text-4xl md:text-5xl font-black text-color1">85%</p>
+                <p class="text-sm font-semibold text-slate-500 uppercase tracking-wider mt-1">Procesos Automatizados</p>
+            </div>
+            <div class="p-4 pt-8 md:pt-4">
+                <p class="text-4xl md:text-5xl font-black text-color2">200+</p>
+                <p class="text-sm font-semibold text-slate-500 uppercase tracking-wider mt-1">Líderes Capacitados</p>
+            </div>
+            <div class="p-4 pt-8 md:pt-4">
+                <p class="text-4xl md:text-5xl font-black text-color3">100%</p>
+                <p class="text-sm font-semibold text-slate-500 uppercase tracking-wider mt-1">Soporte Continuo</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PERFIL / RESUMEN -->
+    <section id="perfil" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-base text-color2 font-semibold tracking-wide uppercase">Sobre mí</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+                    Perfil Profesional Ejecutivo
+                </p>
+                <div class="h-1 w-24 bg-color1 lg:mx-auto mt-4 rounded-full"></div>
+                <p class="mt-4 text-lg text-slate-600">
+                    Especialista con amplio enfoque metodológico en el desarrollo ágil de plataformas, gestión integral de bases de datos y resguardo estratégico de infraestructura de servidores para optimizar la toma de decisiones.
+                </p>
+            </div>
+
+            <!-- Atributos Clave -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-color4 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-color4/10 rounded-lg flex items-center justify-center text-color4 text-xl font-bold mb-6">
+                        <i class="fa-solid fa-code-branch"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-950 mb-2">Desarrollo & Automatización</h3>
+                    <p class="text-sm text-slate-600">
+                        Creación de soluciones a la medida utilizando Python, librerías avanzadas como Yii (PHP), Bots automatizados y macros eficientes que reducen el trabajo administrativo del cliente final de manera contundente.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-color1 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-color1/10 rounded-lg flex items-center justify-center text-color1 text-xl font-bold mb-6">
+                        <i class="fa-solid fa-users-gear"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-950 mb-2">Liderazgo de Plataformas</h3>
+                    <p class="text-sm text-slate-600">
+                        Dirección, configuración y mantenimiento de plataformas LMS como Moodle y Chamilo, así como sistemas integrados de control de asistencia, monitoreo y ERP corporativos a nivel nacional.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-color2 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-color2/10 rounded-lg flex items-center justify-center text-color2 text-xl font-bold mb-6">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-950 mb-2">Seguridad & Datos</h3>
+                    <p class="text-sm text-slate-600">
+                        Estructuración y optimización de base de datos relacionales en Oracle, PostgreSQL y MySQL. Experto certificado en recuperaciones críticas de hardware de almacenamiento RAID, SAS, SCSI e IDE.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN EXPERIENCIA PROFESIONAL -->
+    <section id="experiencia" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16">
+                <h2 class="text-base text-color4 font-semibold tracking-wide uppercase">Trayectoria de Éxito</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+                    Experiencia Profesional Destacada
+                </p>
+                <div class="h-1 w-24 bg-color2 mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Línea de Tiempo Profesional -->
+            <div class="relative border-l-2 border-slate-200 ml-4 md:ml-6 space-y-12">
+                
+                <!-- PUESTO 1 -->
+                <div class="relative pl-8 sm:pl-10">
+                    <div class="absolute -left-[11px] top-1 bg-color4 w-5 h-5 rounded-full ring-4 ring-white"></div>
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 bg-slate-50 p-6 rounded-xl border border-slate-200/60 shadow-sm">
+                        <div class="lg:col-span-4">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-color4/10 text-color4 mb-2">
+                                Enero 2018 - Actualidad
+                            </span>
+                            <h3 class="text-xl font-bold text-slate-950">Jefe de Proyectos</h3>
+                            <p class="text-md font-medium text-color2">Development Data Analysis and Report</p>
+                            <p class="text-xs text-slate-500 mt-1"><i class="fa-solid fa-location-dot mr-1"></i> Lima, Perú</p>
+                        </div>
+                        <div class="lg:col-span-8 space-y-4">
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Actividades Clave</h4>
+                                <p class="text-slate-600 text-sm">Programación integral de proyectos utilizando la librería Yii en PHP, estructuración y maquetación de Mockups interactivos directos con clientes, automatización robusta de procesos internos con Python y desarrollo de Macros avanzadas en VBA. Administración ágil de PostgreSQL y MySQL.</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg border border-slate-100">
+                                <h4 class="text-xs font-bold text-color3 uppercase tracking-wider mb-2"><i class="fa-solid fa-trophy mr-1"></i> Logros Cuantificables</h4>
+                                <ol class="list-decimal list-inside space-y-1.5 text-slate-700 text-sm">
+                                    <li>Liderazgo en el despliegue del <strong class="text-slate-900">100% de las interfaces web</strong> interactivas de clientes del sector corporativo de la empresa.</li>
+                                    <li>Incremento del <strong class="text-slate-900">85% en la eficiencia operativa</strong> de clientes clave mediante la implementación de Bots y Web Scrapers personalizados en Python.</li>
+                                    <li>Reducción del <strong class="text-slate-900">50% del tiempo de generación de informes</strong> internos a través de la integración de macros automatizadas de VBA.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PUESTO 2 -->
+                <div class="relative pl-8 sm:pl-10">
+                    <div class="absolute -left-[11px] top-1 bg-color1 w-5 h-5 rounded-full ring-4 ring-white"></div>
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 bg-slate-50 p-6 rounded-xl border border-slate-200/60 shadow-sm">
+                        <div class="lg:col-span-4">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-color1/10 text-color1 mb-2">
+                                Diciembre 2015 - Diciembre 2017
+                            </span>
+                            <h3 class="text-xl font-bold text-slate-950">Estadístico / Analista de Datos</h3>
+                            <p class="text-md font-medium text-color2">Hospital Carlos Lanfranco La Hoz</p>
+                            <p class="text-xs text-slate-500 mt-1"><i class="fa-solid fa-location-dot mr-1"></i> Lima, Perú</p>
+                        </div>
+                        <div class="lg:col-span-8 space-y-4">
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Actividades Clave</h4>
+                                <p class="text-slate-600 text-sm">Formulación de indicadores de atenciones hospitalarias, administración integral de la base de datos local en FoxPro de los HIS correspondientes al ingreso mensual por consultorio externo e internamiento, y desarrollo de flujos para envío seguro al MINSA.</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg border border-slate-100">
+                                <h4 class="text-xs font-bold text-color3 uppercase tracking-wider mb-2"><i class="fa-solid fa-trophy mr-1"></i> Logros Cuantificables</h4>
+                                <ol class="list-decimal list-inside space-y-1.5 text-slate-700 text-sm">
+                                    <li>Gestión y reporte del <strong class="text-slate-900">100% de la base de datos HIS</strong> mensual, remitiéndola oportunamente y sin incidencias a la Red de Salud del MINSA.</li>
+                                    <li>Reducción del <strong class="text-slate-900">25% en los tiempos de reprogramación</strong> mensual de atenciones de las especialidades del hospital gracias a un modelo matricial de planificación.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PUESTO 3 -->
+                <div class="relative pl-8 sm:pl-10">
+                    <div class="absolute -left-[11px] top-1 bg-color2 w-5 h-5 rounded-full ring-4 ring-white"></div>
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 bg-slate-50 p-6 rounded-xl border border-slate-200/60 shadow-sm">
+                        <div class="lg:col-span-4">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-color2/10 text-color2 mb-2">
+                                Enero 2014 - Actualidad (Paralelo)
+                            </span>
+                            <h3 class="text-xl font-bold text-slate-950">Ingeniero de Sistemas</h3>
+                            <p class="text-md font-medium text-color2">Perudata Recovery SAC</p>
+                            <p class="text-xs text-slate-500 mt-1"><i class="fa-solid fa-location-dot mr-1"></i> Lima, Perú</p>
+                        </div>
+                        <div class="lg:col-span-8 space-y-4">
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Actividades Clave</h4>
+                                <p class="text-slate-600 text-sm">Especialista técnico senior a cargo de la recuperación avanzada de datos en entornos físicos dañados o corruptos, incluyendo arreglos de discos IDE, SAS, SCSI y arreglos críticos de servidores en configuraciones RAID robustas.</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg border border-slate-100">
+                                <h4 class="text-xs font-bold text-color3 uppercase tracking-wider mb-2"><i class="fa-solid fa-trophy mr-1"></i> Logros Cuantificables</h4>
+                                <ol class="list-decimal list-inside space-y-1.5 text-slate-700 text-sm">
+                                    <li>Tasa del <strong class="text-slate-900">92% de éxito en la recuperación de datos</strong> de servidores RAID empresariales de alta criticidad en fallas catastróficas.</li>
+                                    <li>Lanzamiento y optimización de la <strong class="text-slate-900">nueva plataforma web corporativa de la empresa</strong>, incrementando las consultas comerciales digitales.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PUESTO 4 -->
+                <div class="relative pl-8 sm:pl-10">
+                    <div class="absolute -left-[11px] top-1 bg-color4 w-5 h-5 rounded-full ring-4 ring-white"></div>
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 bg-slate-50 p-6 rounded-xl border border-slate-200/60 shadow-sm">
+                        <div class="lg:col-span-4">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-color4/10 text-color4 mb-2">
+                                Febrero 2013 - Enero 2014
+                            </span>
+                            <h3 class="text-xl font-bold text-slate-950">Jefe de Sistemas</h3>
+                            <p class="text-md font-medium text-color2">Zona VIP Agencia BTL</p>
+                            <p class="text-xs text-slate-500 mt-1"><i class="fa-solid fa-location-dot mr-1"></i> San Luis, Lima</p>
+                        </div>
+                        <div class="lg:col-span-8 space-y-4">
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Actividades Clave</h4>
+                                <p class="text-slate-600 text-sm">Mantenimiento y administración del ERP OCTOPUS. Administración y aprovisionamiento de servidores (HP Proliant DL360gen8 y sistemas de almacenamiento masivo Lacie). Configuración preventiva de estaciones de trabajo Windows y MacOS.</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg border border-slate-100">
+                                <h4 class="text-xs font-bold text-color3 uppercase tracking-wider mb-2"><i class="fa-solid fa-trophy mr-1"></i> Logros Cuantificables</h4>
+                                <ol class="list-decimal list-inside space-y-1.5 text-slate-700 text-sm">
+                                    <li>Establecimiento de políticas de resguardo que consiguieron el <strong class="text-slate-900">100% de la continuidad de información</strong> ante incidentes mediante la automatización periódica de FBACKUP.</li>
+                                    <li>Integración exitosa del sistema Help Desk centralizado para brindar asistencia a <strong class="text-slate-900">3 oficinas regionales de provincia</strong>.</li>
+                                    <li>Mejora del control de seguridad corporativa implementando un entorno VMware de alto rendimiento que alojó simultáneamente el cortafuegos virtual y el ERP de la empresa.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PUESTO 5 -->
+                <div class="relative pl-8 sm:pl-10">
+                    <div class="absolute -left-[11px] top-1 bg-color1 w-5 h-5 rounded-full ring-4 ring-white"></div>
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 bg-slate-50 p-6 rounded-xl border border-slate-200/60 shadow-sm">
+                        <div class="lg:col-span-4">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-color1/10 text-color1 mb-2">
+                                Marzo 2012 - Diciembre 2012
+                            </span>
+                            <h3 class="text-xl font-bold text-slate-950">Administrador de Red y Aula Virtual</h3>
+                            <p class="text-md font-medium text-color2">Ministerio de Educación - CEBA PAEBA Ventanilla</p>
+                            <p class="text-xs text-slate-500 mt-1"><i class="fa-solid fa-location-dot mr-1"></i> Callao, Perú</p>
+                        </div>
+                        <div class="lg:col-span-8 space-y-4">
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Actividades Clave</h4>
+                                <p class="text-slate-600 text-sm">Planteamiento técnico integral de la plataforma virtual Moodle de aprendizaje. Capacitación en el manejo de TIC a la red docente y soporte técnico directo en hardware y redes de los laboratorios computacionales.</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg border border-slate-100">
+                                <h4 class="text-xs font-bold text-color3 uppercase tracking-wider mb-2"><i class="fa-solid fa-trophy mr-1"></i> Logros Cuantificables</h4>
+                                <ol class="list-decimal list-inside space-y-1.5 text-slate-700 text-sm">
+                                    <li>Coordinación exitosa con la DREC, el Minedu y el Ministerio de Educación de España para certificar a <strong class="text-slate-900">aproximadamente 200 participantes</strong> en el proyecto educativo.</li>
+                                    <li>Habilitación del aula virtual Moodle con un <strong class="text-slate-900">uptime del 99.8%</strong>, logrando que el alumnado accediera sin interrupciones técnicas durante el año escolar.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE PROYECTOS Y CAPACIDADES TÉCNICAS -->
+    <section id="proyectos" class="py-20 bg-slate-100/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center max-w-2xl mx-auto">
+                <h2 class="text-base text-color1 font-semibold tracking-wide uppercase">Habilidades y Tecnologías</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+                    Herramientas de Trabajo & Especialidad
+                </p>
+                <div class="h-1 w-24 bg-color4 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Stack 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                    <span class="text-4xl text-color4 mb-4 block"><i class="fa-brands fa-python"></i></span>
+                    <h3 class="font-bold text-slate-900 mb-2">Desarrollo de Software</h3>
+                    <p class="text-xs text-slate-500">Python (Bots y Web Scraping), PHP (Yii Framework), VBA Macros para productividad administrativa.</p>
+                </div>
+                <!-- Stack 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                    <span class="text-4xl text-color2 mb-4 block"><i class="fa-solid fa-server"></i></span>
+                    <h3 class="font-bold text-slate-900 mb-2">Administración de TI</h3>
+                    <p class="text-xs text-slate-500">VMware ESXi, Servidores HP Proliant, Sistemas NAS Lacie, Firewall corporativos y redes locales LAN.</p>
+                </div>
+                <!-- Stack 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                    <span class="text-4xl text-color1 mb-4 block"><i class="fa-solid fa-graduation-cap"></i></span>
+                    <h3 class="font-bold text-slate-900 mb-2">Plataformas E-Learning</h3>
+                    <p class="text-xs text-slate-500">Administración de Moodle, implementación de Chamilo LMS y desarrollo de planes de capacitación TIC.</p>
+                </div>
+                <!-- Stack 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                    <span class="text-4xl text-color3 mb-4 block"><i class="fa-solid fa-database"></i></span>
+                    <h3 class="font-bold text-slate-900 mb-2">Bases de Datos</h3>
+                    <p class="text-xs text-slate-500">Diseño avanzado de base de datos relacionales en Oracle 11g, PostgreSQL, MySQL y entornos legacy FoxPro.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN EDUCACIÓN -->
+    <section id="educacion" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16">
+                <h2 class="text-base text-color2 font-semibold tracking-wide uppercase">Formación Constante</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+                    Educación y Grados Académicos
+                </p>
+                <div class="h-1 w-24 bg-color1 mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Educación 1 -->
+                <div class="p-6 bg-slate-50 border border-slate-200/60 rounded-xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-color1 w-12 h-12 flex items-center justify-center rounded-bl-xl text-white">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <span class="text-xs font-bold text-color1 uppercase">Posgrado</span>
+                    <h3 class="text-lg font-bold text-slate-900 mt-2">Maestría en Tecnología Educativa</h3>
+                    <p class="text-sm font-medium text-slate-600">Universidad Privada "César Vallejo" - Lima Norte</p>
+                    <p class="text-xs text-slate-400 mt-2">Estado: Estudiante de Maestría</p>
+                </div>
+
+                <!-- Educación 2 -->
+                <div class="p-6 bg-slate-50 border border-slate-200/60 rounded-xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-color4 w-12 h-12 flex items-center justify-center rounded-bl-xl text-white">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <span class="text-xs font-bold text-color4 uppercase">Título Profesional</span>
+                    <h3 class="text-lg font-bold text-slate-900 mt-2">Ingeniero de Sistemas</h3>
+                    <p class="text-sm font-medium text-slate-600">Universidad Privada "Telesup"</p>
+                    <p class="text-xs text-slate-400 mt-2">Estado: Titulado / Colegiado</p>
+                </div>
+
+                <!-- Educación 3 -->
+                <div class="p-6 bg-slate-50 border border-slate-200/60 rounded-xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-color2 w-12 h-12 flex items-center justify-center rounded-bl-xl text-white">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <span class="text-xs font-bold text-color2 uppercase">Título Pedagógico</span>
+                    <h3 class="text-lg font-bold text-slate-900 mt-2">Licenciado en Matemáticas, Física e Informática</h3>
+                    <p class="text-sm font-medium text-slate-600">Universidad Nacional "José Faustino Sánchez Carrión"</p>
+                    <p class="text-xs text-slate-400 mt-2">Estado: Titulado</p>
+                </div>
+            </div>
+
+            <!-- Certificaciones y Especializaciones Adicionales -->
+            <div class="mt-12 bg-slate-50 p-8 rounded-xl border border-slate-200/60">
+                <h3 class="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-color4"></i> Certificaciones & Seminarios Clave
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm text-slate-700">
+                    <div class="flex items-start gap-2">
+                        <span class="text-color4 mt-1"><i class="fa-solid fa-certificate"></i></span>
+                        <p><strong>Oracle Database 11g R2 Certification</strong> – Tecsup</p>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="text-color1 mt-1"><i class="fa-solid fa-certificate"></i></span>
+                        <p><strong>Curso de Administrador Aula Mentor</strong> – España</p>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="text-color2 mt-1"><i class="fa-solid fa-certificate"></i></span>
+                        <p><strong>Diplomado de Nuevas Tecnologías TIC</strong> – UGEL Ventanilla</p>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="text-color3 mt-1"><i class="fa-solid fa-certificate"></i></span>
+                        <p><strong>Ciclo Intermedio de Idiomas</strong> – Instituto Privado SISE</p>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="text-color4 mt-1"><i class="fa-solid fa-certificate"></i></span>
+                        <p><strong>Administración de Plataformas Virtuales</strong> – EduCallao</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE REFERENCIAS LABORALES -->
+    <section class="py-20 bg-slate-100/60 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16">
+                <h2 class="text-base text-color4 font-semibold tracking-wide uppercase">Garantía Profesional</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+                    Referencias Laborales
+                </p>
+                <div class="h-1 w-24 bg-color3 mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Referencia 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/60">
+                    <h4 class="font-bold text-slate-900 text-base">Ing. Grovert Leon Osorio</h4>
+                    <p class="text-xs text-color2 font-medium">Gerente General</p>
+                    <p class="text-sm text-slate-500 mb-4">Peru Data Recovery</p>
+                    <div class="text-sm border-t border-slate-100 pt-3 flex items-center justify-between">
+                        <span class="text-xs text-slate-400"><i class="fa-solid fa-phone"></i> Contacto</span>
+                        <span class="font-semibold text-slate-700">958039107</span>
+                    </div>
+                </div>
+
+                <!-- Referencia 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/60">
+                    <h4 class="font-bold text-slate-900 text-base">Lic. Ines Malpartida</h4>
+                    <p class="text-xs text-color2 font-medium">Jefa de Recursos Humanos</p>
+                    <p class="text-sm text-slate-500 mb-4">Zona Vip Agencia BTL</p>
+                    <div class="text-sm border-t border-slate-100 pt-3 flex items-center justify-between">
+                        <span class="text-xs text-slate-400"><i class="fa-solid fa-phone"></i> Contacto</span>
+                        <span class="font-semibold text-slate-700">986795772</span>
+                    </div>
+                </div>
+
+                <!-- Referencia 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/60">
+                    <h4 class="font-bold text-slate-900 text-base">Mg. Luis Eloy Olano Soriano</h4>
+                    <p class="text-xs text-color2 font-medium">Director General / Ex-Director UPCI</p>
+                    <p class="text-sm text-slate-500 mb-4">IPEC - Ventanilla</p>
+                    <div class="text-sm border-t border-slate-100 pt-3 flex items-center justify-between">
+                        <span class="text-xs text-slate-400"><i class="fa-solid fa-phone"></i> Contacto</span>
+                        <span class="font-semibold text-slate-700">9993-15452</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CONTACTO -->
+    <section id="contacto" class="py-20 bg-slate-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <div>
+                    <h2 class="text-color2 text-base font-semibold uppercase">Establezcamos Comunicación</h2>
+                    <p class="text-3xl font-extrabold mt-2 sm:text-4xl text-white">¿Tienes un proyecto de TI o automatización?</p>
+                    <p class="mt-4 text-slate-300">
+                        Escríbeme o llámame para agendar una consultoría técnica personalizada o revisar la arquitectura y procesos de tu negocio.
+                    </p>
+
+                    <div class="mt-8 space-y-4">
+                        <div class="flex items-center gap-4">
+                            <span class="w-10 h-10 rounded-lg bg-color4/20 border border-color4/40 flex items-center justify-center text-color4">
+                                <i class="fa-solid fa-envelope"></i>
+                            </span>
+                            <div>
+                                <span class="text-xs text-slate-400 block">Correo Principal</span>
+                                <a href="mailto:Yuri.silva@ddar.pe" class="font-semibold text-white hover:text-color4 transition">Yuri.silva@ddar.pe</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <span class="w-10 h-10 rounded-lg bg-color1/20 border border-color1/40 flex items-center justify-center text-color1">
+                                <i class="fa-solid fa-mobile-screen"></i>
+                            </span>
+                            <div>
+                                <span class="text-xs text-slate-400 block">Móvil de Contacto</span>
+                                <a href="tel:+51960835892" class="font-semibold text-white hover:text-color1 transition">+51 960 835 892</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <span class="w-10 h-10 rounded-lg bg-color2/20 border border-color2/40 flex items-center justify-center text-color2">
+                                <i class="fa-solid fa-map-pin"></i>
+                            </span>
+                            <div>
+                                <span class="text-xs text-slate-400 block">Ubicación Actual</span>
+                                <span class="font-semibold text-white">Calle Santa Amalia N° 6453, S.M.P - Los Olivos, Lima</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario formal de contacto -->
+                <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-xl">
+                    <h3 class="text-xl font-bold mb-6 text-white">Envía un mensaje rápido</h3>
+                    <form onsubmit="event.preventDefault(); showSuccessModal();" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-400 uppercase mb-1">Nombre Completo</label>
+                            <input type="text" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-color4 transition text-sm" placeholder="Ej. Juan Pérez" required>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-400 uppercase mb-1">Correo Electrónico</label>
+                            <input type="email" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-color4 transition text-sm" placeholder="juan@empresa.com" required>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-400 uppercase mb-1">Mensaje o Requerimiento</label>
+                            <textarea rows="4" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-color4 transition text-sm" placeholder="Detalla el alcance o dudas técnicas..." required></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3 bg-color4 hover:bg-opacity-90 font-bold rounded-lg text-white shadow-lg transition">
+                            Enviar Mensaje <i class="fa-solid fa-paper-plane ml-1"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- VENTANA MODAL INTEGRADA PARA REEMPLAZAR ALERT() -->
+    <div id="success-modal" class="hidden fixed inset-0 z-50 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <!-- Fondo Oscuro Translúcido -->
+            <div class="fixed inset-0 bg-slate-950/80 transition-opacity" aria-hidden="true" onclick="hideSuccessModal()"></div>
+            <!-- Hack de centrado -->
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+            <!-- Caja del Modal -->
+            <div class="inline-block align-bottom bg-white rounded-xl text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:align-middle sm:max-w-md sm:w-full border border-slate-100">
+                <div class="bg-white px-6 pt-6 pb-4 sm:p-6 sm:pb-4">
+                    <div class="sm:flex sm:items-start">
+                        <div class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-color3/15 text-color3 sm:mx-0 sm:h-10 sm:w-10">
+                            <i class="fa-solid fa-circle-check text-xl"></i>
+                        </div>
+                        <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                            <h3 class="text-lg leading-6 font-bold text-slate-900" id="modal-title">¡Mensaje Enviado con Éxito!</h3>
+                            <div class="mt-2">
+                                <p class="text-sm text-slate-500">
+                                    Muchas gracias por ponerte en contacto. Tu requerimiento ha sido procesado de manera demostrativa. Para producción, puedes conectar este formulario a un servicio de correo transaccional.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-slate-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                    <button type="button" class="w-full inline-flex justify-center rounded-lg border border-transparent shadow-sm px-4 py-2 bg-color4 text-base font-semibold text-white hover:bg-opacity-90 focus:outline-none sm:ml-3 sm:w-auto sm:text-sm" onclick="hideSuccessModal()">
+                        Entendido
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSuccessModal() {
+            document.getElementById('success-modal').classList.remove('hidden');
+        }
+        function hideSuccessModal() {
+            document.getElementById('success-modal').classList.add('hidden');
+        }
+    </script>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-500 py-12 text-center border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+            <p class="text-sm">
+                &copy; 2026 Yuri Mijaíl Hans Silva Ramos. Todos los derechos reservados.
+            </p>
+            <p class="text-xs text-slate-600">
+                Landing page diseñada y optimizada para la demostración de Hoja de Vida Profesional.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
